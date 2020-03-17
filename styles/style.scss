@@ -1,7 +1,31 @@
-form {
-    border: 1px solid blue;
-  
-    div {
-      border: 1px solid red;
-    }
-  }
+@import 'vendors/reset.scss';
+@import 'config/medias.scss';
+@import 'blocs/newParty.scss';
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+
+  margin-top: 30px;
+}
+
+h3 {
+  font-size: 16px;
+
+  margin-top: 10px;
+}
+
+h1, h2, b {
+  font-weight: 900;
+}
+
+.items {
+  margin-top: 16px;
+}

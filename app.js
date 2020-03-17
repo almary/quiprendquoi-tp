@@ -6,6 +6,7 @@ const axios = require('axios');
 const methodOverride = require('method-override');
 
 
+app.use(express.static('public'));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 // override with POST having ?_method=DELETE
