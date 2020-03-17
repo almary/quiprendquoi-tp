@@ -3,9 +3,13 @@ const express = require("express");
 const app = express();
 const bodyParser = require('body-parser');
 const axios = require('axios');
+const methodOverride = require('method-override');
+
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
+// override with POST having ?_method=DELETE
+app.use(methodOverride('_method'));
 
 
 app.set("view engine", "pug");
@@ -32,10 +36,26 @@ app.get("/party/:id", function(req, res) {
           res.render('party', {
             party: data,
             title: data.name,
+            id: data._id,
             url: `${process.env.FRONT_URL}:${process.env.PORT}/party/${data._id}`
           }),
       )
       .catch((err) => console.log(err));
+});
+
+app.post("/party/:id/items", function(req, res) {
+  axios
+  .post(`${process.env.API_URL}/party/${req.params.id}/items`, req.body)
+  .then((data) => res.redirect(`/party/${req.params.id}`))
+  .catch((err) => console.error(err));
+});
+
+app.delete('/party/:id/items/:idItems', (req, res) => {
+  axios
+    .delete(`${process.env.API_URL}/party/${req.params.id}/items/${req.params.idItems}`)
+    .then((data) => res.redirect(`/party/${req.params.id}`))
+    .catch((err) => console.log(err))
+  ;
 });
 
 
