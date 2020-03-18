@@ -1,18 +1,73 @@
+main {
+  width: 400px;
+  
+  background: #FFFFFF;
+  border: 1px solid rgba(0,0,0,0.14);
+  box-shadow: 0 2px 4px 0 rgba(160,160,160,0.14);
+  border-radius: 4px;
+}
+
+.newParty {
+  padding: 24px;
+}
+
 .newParty__fields {
-  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+}
 
-  @include medium {
-    display: grid;
-    grid-template-columns: 175px 1fr;
-    grid-gap: 5px;
-    max-width: 500px;
-  }
+.newParty__fields--label {
+  font-size: 16px;
+  color: #001143;
+  letter-spacing: -0.13px;
+  
+  margin-bottom: 11px;
+}
 
-  label {
-    display: block;
-    
-    @include medium {
-      place-self: center end;
-    }
-  }
+.newParty__fields--label:not(:first-child) {
+  margin-top: 28px;
+}
+
+.newParty__fields--input {
+  height: 47px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0,17,67,0.52);
+  border-radius: 2px;
+  font-size: 16px;
+  color: #001143;
+  padding: 0 14px 0 14px;
+}
+
+.newParty__fields--input::placeholder {
+  opacity: 0.2;
+  font-size: 16px;
+  color: #001143;
+  letter-spacing: -0.13px;
+}
+
+.newParty__fields--input[type=date]:invalid::-webkit-datetime-edit {
+  opacity: 0.2;
+  font-size: 16px;
+  color: #001143;
+}
+
+button {
+  height: 47px;
+  width: 100%;
+  margin-top: 32px;
+  background: #00238F;
+  border-radius: 4px;
+  
+  font-size: 16px;
+  color: #FFFFFF;
+  letter-spacing: -0.13px;
+  text-align: center;
+  font-weight: 500;
+  
+  transition: box-shadow 200ms;
+}
+
+button:hover {
+  cursor: pointer;  
+  box-shadow: 0 2px 10px 0 rgba(2,39,154,0.54);
 }

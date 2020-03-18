@@ -1,22 +1,34 @@
 include ../partials/header.pug
 h1 Qui prend quoi ?
-h2= party.name
-h3 Créé par #{party.author}
-h3 Évènement le #{party.date}
-label(for="url") Partagez l'événement
-input(id="url" value=`${url}` data-clipboard=`${url}` data-share-url=`${url}` data-share-title=`${party.name}` data-share-text=`${party.author} vous invite à rejoindre l'évènement ${party.name}`)
+<main>
+  <div class="subtitle">
+    <div class="subtitle__content">
+      h2= party.name
+      h3 le #{party.date}
+      h3 Organisé par #{party.author}
+      label(class="subtitle__content--label" for="url") Lien de l'événement
+      input(class="subtitle__content--input" id="url" value=`${url}` data-clipboard=`${url}` data-share-url=`${url}` data-share-title=`${party.name}` data-share-text=`${party.author} vous invite à rejoindre l'évènement ${party.name}`)
+  </div>
+  </div>
 
-form(method="post" action=`/party/${id}/items`)
-  div
-    label(for="name") Nom de l'item
-    input(name="name" id="name" required minlength="1" placeholder="Fromage")
-    label(for="user") Nom de la personne
-    input(name="user" id="user" required minlength="2" placeholder="Jean Michel")
-  button(type="submit") Créer l'item
+  form(method="post" action=`/party/${id}/items`).newItem
+    <div class="newItem__container">
+      div.newItem__fields
+        <div class="newItem__fields--container">
+          label(class="newItem__fields--label" for="name") Nom de l'item
+          input(class="newItem__fields--input" name="name" id="name" required minlength="1" placeholder="Fromage")
+        </div>  
+        <div class="newItem__fields--container">
+          label(class="newItem__fields--label" for="user") Nom de la personne
+          input(class="newItem__fields--input" name="user" id="user" required minlength="2" placeholder="Jean Michel")
+        </div>    
+      button(class="newItem__button" type="submit") Ajouter
+    </div>  
 
-div
-  each item in party.items
-    div(class="items")
-      div <b>#{item.user}</b> ramène <b>#{item.name}</b>
-      form(method="post" action=`/party/${party._id}/items/${item._id}?_method=DELETE`)
-        button(type="submit") Supprimer
+  div.list
+    each item in party.items
+      div(class="items")
+        div.items__description <b>#{item.name}</b> par <b>#{item.user}</b>
+        form(method="post" action=`/party/${party._id}/items/${item._id}?_method=DELETE`)
+          button(class="items__button" type="submit") Supprimer
+</main>

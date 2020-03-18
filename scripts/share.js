@@ -1,6 +1,7 @@
 if (navigator.share) {
   document.querySelectorAll("[data-share-url]").forEach($shareEl => {
     const $button = document.createElement("button");
+    $button.classList.add("subtitle__content--button");
     $button.innerHTML = "Partager";
     $shareEl.parentNode.append($button);
 
