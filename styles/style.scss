@@ -1,6 +1,6 @@
-@import 'vendors/reset.scss';
-@import 'config/medias.scss';
-@import 'blocs/newParty.scss';
+@import "vendors/reset.scss";
+@import "config/medias.scss";
+@import "blocs/newParty.scss";
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -22,7 +22,9 @@ h3 {
   margin-top: 10px;
 }
 
-h1, h2, b {
+h1,
+h2,
+b {
   font-weight: 900;
 }
 
