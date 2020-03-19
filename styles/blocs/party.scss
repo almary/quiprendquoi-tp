@@ -106,10 +106,12 @@
 
 .items {
   position: relative;
-  margin-top: 10px;
+  margin-top: 10px;  
 }
 
 .items__description {
+  max-width: 270px;
+  
   opacity: 0.8;
   font-size: 14px;
   color: #001143;

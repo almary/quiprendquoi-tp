@@ -71,3 +71,17 @@ button:hover {
   cursor: pointer;  
   box-shadow: 0 2px 10px 0 rgba(2,39,154,0.54);
 }
+
+.history {
+  padding: 24px;
+}
+
+.history__link {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.history__link:not(:first-child) {
+  margin-top: 16px;
+}
