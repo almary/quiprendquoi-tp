@@ -9,7 +9,9 @@ h1 <a href="/">Qui prend quoi ?</a>
       h3 Organisé par #{party.author}
       h3 le #{date}
       label(class="subtitle__content--label" for="url") Lien de l'événement
-      input(class="subtitle__content--input" id="url" value=`${url}` data-clipboard=`${url}` data-share-url=`${url}` data-share-title=`${party.name}` data-party-id=`${party._id}` data-share-text=`${party.author} vous invite à rejoindre l'évènement ${party.name}`)
+      input(class="subtitle__content--input" id="url" value=`${url}` data-clipboard=`${url}` data-share-url=`${url}` data-share-title=`${party.name}` data-party-id=`${party._id}` data-share-text=`${party.author} vous invite à rejoindre l'événement ${party.name}`)
+      form(method="get" action=`/party/${party._id}/update`)
+        button(class="subtitle__content--button" type="submit") Modifier l'événement
   </div>
   </div>
 

@@ -18,6 +18,7 @@ app.get("/", function(req, res) {
   res.render("index", { title: "Qui prend quoi ?" });
 });
 
+
 app.post("/party", function(req, res) {
   axios
     .post(`${process.env.API_URL}/party`, req.body)
@@ -40,6 +41,28 @@ app.get("/party/:id", function(req, res) {
       });
     })
     .catch(err => console.log(err));
+});
+
+app.get("/party/:id/update", function(req, res) {
+  axios
+    .get(`${process.env.API_URL}/party/${req.params.id}`)
+    .then(({ data }) => {
+      res.render("update", {
+        party: data,
+        title: data.name,
+        id: data._id,
+        date: data.date.substring(0, data.date.indexOf('T')),
+      });
+    })
+    .catch(err => console.log(err));
+});
+
+
+app.patch("/party/:id", function(req, res) {
+  axios
+    .patch(`${process.env.API_URL}/party/${req.params.id}`, req.body)
+    .then(() => res.redirect(`/party/${req.params.id}`))
+    .catch(err => res.send(err));
 });
 
 app.post("/party/:id/items", function(req, res) {
