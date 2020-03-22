@@ -29,7 +29,7 @@ La méthode fetch() prend un argument obligatoire : le chemin vers la ressource 
 
 Par exemple, une requête basique ressemble à ça : 
 
-``
+```javascript
 fetch('exemple.json')
   .then((response) => {
     return response.json()
@@ -40,7 +40,7 @@ fetch('exemple.json')
   .catch((err) =>{
     console.log(err)
   })
-``
+```
 
 #### Axios
 
