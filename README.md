@@ -8,10 +8,10 @@
 
 ## Améliorations apportées
 
-- Ajout d'un design (commit `style`)
+- Ajout d'un design (commit `style`, tous les fichiers dans `/style`)
 - Modification d'un événement (commit `update event`)
 - Suppression d'un événement (commit `delete event`)
-- Ajout des évènements récemment consultés + accès rapide (commit `récemment consultés`)
+- Événements récemment consultés + accès rapide (commit `récemment consultés`)
 - Ajout/suppression d'items (commit `Etape 17`)
 - Requête fetch toutes les 5 secondes sur la page party, recharge la page si la liste des items a changé (commit `fetch`)
 
