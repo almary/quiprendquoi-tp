@@ -17,11 +17,7 @@
 
 ## Article personnel
 
-### Sujet : Axios vs Fetch
-
-Ce TP nous fait utiliser Axios et Fetch qui permettent de faire des requêtes HTTP.
-
-Axios est une librairie alors que Fetch est une API.
+### Sujet : Fetch vs Axios
 
 #### Fetch
 
@@ -102,9 +98,10 @@ axios
     console.log(error)
   })
 ```
+#### Interception des requêtes et des réponses
 
-Plan en cas de panne d'inspiration :
+L'une des principales caractéristiques d'Axios est sa capacité à intercepter les requêtes HTTP. Les intercepteurs peuvent être très utiles lorsqu'on veut toucher à des requêtes HTTP. Alors Fetch ne fournit pas de moyen d'intercepter les requêtes HTTP. Il faut réécrire la méthode globale et définir un intercepteur.
 
-- Description du sujet choisi (sa définition, son but...)
-- Exemple d'utitlisation ou d'implémentation (bout de code si pertinent, capture d'écran...)
-- Conclusion : avantages, inconvénients et cas d'usage
+#### Conclusion
+
+J'ai listé ici quelques différences majeures entre Axios et Fetch. Finalement, Axios et Fetch permettent globalement de faire la même chose. Les différences s'illustrent seulement dans des cas précis mais sont pour la plupart du temps contournables. Le choix peut donc être dicté par l'habitude qu'on a d'utiliser un des deux plutôt que l'autre, le besoin de compatibilité (même si Fetch dispose de polyfill), une fonctionnalité précise etc... Les deux choix sont viables dans la grande majorité des cas.
