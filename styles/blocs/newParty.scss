@@ -1,5 +1,9 @@
 main {
   width: 400px;
+
+  @include mobile {
+    width: 90vw;
+  }
   
   background: #FFFFFF;
   border: 1px solid rgba(0,0,0,0.14);

@@ -35,6 +35,7 @@ app.get("/party/:id", function(req, res) {
         party: data,
         title: data.name,
         id: data._id,
+        date: data.date.substring(0, data.date.indexOf('T')),
         url: `${process.env.FRONT_URL}:${process.env.PORT}/party/${data._id}`
       });
     })

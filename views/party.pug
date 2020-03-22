@@ -5,11 +5,11 @@ h1 <a href="/">Qui prend quoi ?</a>
 <main>
   <div class="subtitle">
     <div class="subtitle__content">
-      h2= party.name
-      h3 le #{party.date}
+      h2= title
       h3 Organisé par #{party.author}
+      h3 le #{date}
       label(class="subtitle__content--label" for="url") Lien de l'événement
-      input(class="subtitle__content--input" id="url" value=`${url}` data-clipboard=`${url}` data-share-url=`${url}` data-share-title=`${party.name}` data-share-text=`${party.author} vous invite à rejoindre l'évènement ${party.name}`)
+      input(class="subtitle__content--input" id="url" value=`${url}` data-clipboard=`${url}` data-share-url=`${url}` data-share-title=`${party.name}` data-party-id=`${party._id}` data-share-text=`${party.author} vous invite à rejoindre l'évènement ${party.name}`)
   </div>
   </div>
 

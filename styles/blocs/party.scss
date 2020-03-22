@@ -44,6 +44,7 @@
 .newItem__fields, .newItem__container, .items {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .newItem__fields--container {
@@ -51,6 +52,10 @@
   flex-direction: column;
   
   width: 144px;
+
+  @include mobile {
+    margin-bottom: 16px;
+  }
 }
 
 .newItem__fields--label {
@@ -93,6 +98,10 @@
   color: #FFFFFF;
   letter-spacing: -0.12px;
   text-align: center;
+
+  @include mobile {
+    position: initial;
+  }
 }
 
 .list {
