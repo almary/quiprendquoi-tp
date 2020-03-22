@@ -49,10 +49,10 @@ Axios est une bibliothèque Javascript utilisée pour effectuer des requêtes ht
 
 Selon sa documentation, Axios présente certaines caractéristiques essentielles :
 
-Il peut être utilisé pour intercepter les demandes et les réponses http.
-Il transforme automatiquement les données des demandes et des réponses.
-Il possède un support intégré pour la progression des téléchargements.
-Il a la possibilité d'annuler des demandes.
+- Il peut être utilisé pour intercepter les demandes et les réponses http.
+- Il transforme automatiquement les données des demandes et des réponses.
+- Il possède un support intégré pour la progression des téléchargements.
+- Il a la possibilité d'annuler des demandes.
 
 
 Par exemple, une requête basique ressemble à ça : 
