@@ -61,7 +61,7 @@ Il a la possibilité d'annuler des demandes.
 
 Par exemple, une requête basique ressemble à ça : 
 
-``
+```javascript
 axios.get('exemple.json')
   .then(function (response) {
     return response;
@@ -69,7 +69,7 @@ axios.get('exemple.json')
   .catch(function (error) {
     console.log(error);
   });
-``
+```
 
 #### Compatibilité
 
@@ -82,7 +82,7 @@ Ce qui nous oblige à utiliser un polyfill tel que `whatwg-fetch`.
 
 Axios transforme automatiquement les datas lors de la requête alors qu'en utilisant Fetch, il faut le faire manuellement :
 
-``
+```javascript
 // Fetch
 fetch("exemple.json")
   .then(response => response.json())
@@ -90,8 +90,8 @@ fetch("exemple.json")
     console.log(data)
   })
   .catch(error => console.error(error))
-``
-``
+```
+```javascript
 // Axios
 axios
   .get("exemple.json")
@@ -101,7 +101,7 @@ axios
   .catch(error => {
     console.log(error)
   })
-``
+```
 
 Plan en cas de panne d'inspiration :
 
