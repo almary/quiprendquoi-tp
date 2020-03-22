@@ -11,8 +11,6 @@
 - Ajout d'un design (commit: `style`)
 - Ajout des évènements récemment consultés + accès rapide (commit `récemment consultés`)
 - Ajout/suppression d'items (commit `Etape 17`)
-- Utilisation du localStorage pour stocker le nom de l'utilisateur (`user.js`)
-- Meilleure présentation visuelle des items (`party.scss`)
 
 ## Article personnel
 
