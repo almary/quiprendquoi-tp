@@ -6,6 +6,7 @@ const axios = require("axios");
 const methodOverride = require("method-override");
 
 app.use(express.static("public"));
+app.use(express.static('pwa'));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 // override with POST having ?_method=DELETE
@@ -24,7 +25,6 @@ app.post("/party", function(req, res) {
       res.redirect(`/party/${data._id}`);
     })
     .catch(err => res.send(err));
-  //page d'erreur à l'avenir
 });
 
 app.get("/party/:id", function(req, res) {

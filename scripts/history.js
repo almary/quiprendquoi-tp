@@ -1,6 +1,26 @@
-var splicedURL = window.location.href.split("/");
+// //Wait for the dom
+window.onload = setupHistoryButton;
 
-if (splicedURL[3] == "party") {
+//Button delete history
+function setupHistoryButton() {
+  var deleteHistoryButton = document.getElementById("deleteHistory");
+  if (deleteHistoryButton) {
+    deleteHistoryButton.addEventListener("click", deleteHistory);
+  }
+}
+
+function deleteHistory() {
+  localStorage.removeItem("createdHistory");
+  removeHistoryLinks();
+}
+
+//
+
+function isPartyPage(url) {
+  return /party\/[a-zA-Z0-9]*$/.test(url);
+}
+
+if (isPartyPage(window.location.href) == true) {
   createdHistory(window.location.href);
 }
 
@@ -24,8 +44,16 @@ if (urlHistory.length !== 0) {
       const $a = document.createElement("a");
       $a.classList.add("history__link");
       $a.href = urlHistory[i];
+      $a.onload = "print()";
       $a.innerHTML = urlHistory[i];
       $historyEl.append($a);
     }
   });
+}
+
+function removeHistoryLinks() {
+  var historyLinks = document.getElementsByClassName("history__link");
+  while (historyLinks.length > 0) {
+    historyLinks[0].parentNode.removeChild(historyLinks[0]);
+  }
 }

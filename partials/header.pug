@@ -1,7 +1,14 @@
 html(lang="fr")
   head 
     link(rel="stylesheet" href="/style.css")
+    link(rel="manifest" href="/manifest.json")
     script(src="/script.js" async)
+    script.
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker.register("/sw.js")
+          .then(() => console.log('Service worker is registered'))
+          .catch(err => console.warn(err));
+      }
     title QPQ - #{title}
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
