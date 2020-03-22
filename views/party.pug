@@ -12,6 +12,8 @@ h1 <a href="/">Qui prend quoi ?</a>
       input(class="subtitle__content--input" id="url" value=`${url}` data-clipboard=`${url}` data-share-url=`${url}` data-share-title=`${party.name}` data-party-id=`${party._id}` data-share-text=`${party.author} vous invite à rejoindre l'événement ${party.name}`)
       form(method="get" action=`/party/${party._id}/update`)
         button(class="subtitle__content--button" type="submit") Modifier l'événement
+      form(method="post" action=`/party/${party._id}?_method=DELETE`)
+          button(class="subtitle__content--button" type="submit") Supprimer l'événement
   </div>
   </div>
 
