@@ -21,10 +21,10 @@
 
 #### Fetch
 
-L'API Fetch permet de réaliser des requêtes HTTP et accéder à leurs réponses. Elle fournit également une méthode globale fetch() qui offre un moyen facile et logique de récupérer des ressources de manière asynchrone.
+L'API Fetch permet de réaliser des requêtes HTTP et accéder à leurs réponses. Elle fournit également une méthode globale fetch() qui permet de récupérer facilement des ressources de manière asynchrone.
 
 
-La méthode fetch() prend un argument obligatoire : le chemin vers la ressource que vous voulez récupérer. Et renvoie une réponse.
+La méthode fetch() prend un argument obligatoire : le chemin vers la ressource à récupérer. Et renvoie une réponse.
 
 
 Par exemple, une requête basique ressemble à ça : 
@@ -47,7 +47,7 @@ fetch('exemple.json')
 Axios est une bibliothèque Javascript utilisée pour effectuer des requêtes http depuis node.js ou XMLHttpRequests depuis le navigateur. Elle prend en charge l'API Promise native (https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
 
-Selon sa documentation, Axios présente certaines caractéristiques essentielles :
+Selon sa documentation, il présente certaines caractéristiques essentielles :
 
 - Il peut être utilisé pour intercepter les demandes et les réponses http.
 - Il transforme automatiquement les données des demandes et des réponses.
@@ -69,7 +69,7 @@ axios.get('exemple.json')
 
 #### Compatibilité
 
-Un des avantages d'Axios est qu'il est supporté par une énorme majorité de navigateurs. Parmis lesquels on retrouve IE 11 qui fait tourner Axios sans aucun problème.
+Un des avantages d'Axios est qu'il est supporté par une l'énorme majorité de navigateurs. Parmis lesquels on retrouve IE 11 qui fait tourner Axios sans problème.
 
 Fetch quant à lui ne fonctionne pas sur IE 11 (voir https://caniuse.com/#feat=fetch)
 Ce qui nous oblige à utiliser un polyfill tel que `whatwg-fetch`.
