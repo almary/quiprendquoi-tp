@@ -8,7 +8,7 @@
 
 ## Améliorations apportées
 
-- Ajout d'un design (commit: `style`)
+- Ajout d'un design (commit `style`)
 - Ajout des évènements récemment consultés + accès rapide (commit `récemment consultés`)
 - Ajout/suppression d'items (commit `Etape 17`)
 
