@@ -104,4 +104,4 @@ L'une des principales caractéristiques d'Axios est sa capacité à intercepter 
 
 #### Conclusion
 
-J'ai listé ici quelques différences majeures entre Axios et Fetch. Finalement, Axios et Fetch permettent globalement de faire la même chose. Les différences s'illustrent seulement dans des cas précis mais sont pour la plupart du temps contournables. Le choix peut donc être dicté par l'habitude qu'on a d'utiliser un des deux plutôt que l'autre, le besoin de compatibilité (même si Fetch dispose de polyfill), une fonctionnalité précise etc... Les deux choix sont viables dans la grande majorité des cas.
+J'ai listé ici quelques différences majeures entre Axios et Fetch. Finalement, Axios et Fetch permettent globalement de faire les mêmes choses. Les différences s'illustrent seulement dans des cas précis mais sont la plupart du temps contournables. Le choix peut donc être dicté par l'habitude qu'on a d'utiliser un des deux plutôt que l'autre, le besoin de compatibilité (même si Fetch dispose de polyfill), une fonctionnalité précise etc... Les deux choix sont viables dans la grande majorité des cas.
